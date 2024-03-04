@@ -21,13 +21,37 @@
       "name": "Jordan",
       "username": "Jordan567",
       "email": "jordan99@msn.com",
-      "password": "password12345"
+      "password": "password098"
     },
     {
       "name": "Blake",
       "username": "theBlakey123",
       "email": "the_blake@yahoo.com",
-      "password": "password12345"
+      "password": "password6789"
+    },
+    {
+      "name": "Raja",
+      "username": "rajaRules",
+      "email" : "raja@gmail.com",
+      "password": "codingisfun"
+    },
+    {
+      "name": "Kittiya",
+      "username": "kitty",
+      "email": "kitty@gmail.com",
+      "password":"catsarefun"
+    },
+    {
+      "name": "Kiara",
+      "username": "kiaraswag",
+      "email": "kiara_ov@yahoo.com",
+      "password": "KiaraO"
+    },
+    {
+      "name": "Tyler",
+      "username": "tylerc2017",
+      "email": "tyler@gmail.com",
+      "password": "gemmais#1"
     }
   ]
   
