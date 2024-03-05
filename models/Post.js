@@ -17,11 +17,11 @@ Post.init(
     content: {
         type: DataTypes.TEXT,
     },
-    post_id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        allowNull: false,
-    },
+    // post_id: {
+    //     type: sequelize.UUID,
+    //     defaultValue: sequelize.UUIDV4,
+    //     allowNull: false,
+    // },
     user_id: {
         type: DataTypes.INTEGER,
     }
