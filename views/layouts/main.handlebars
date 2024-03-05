@@ -10,28 +10,60 @@
 
 <body>
   <header>
-    <h1>Welcome to the CRUDit home page!</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <h1>Welcome to the CRUDit Forum home page!</h1>
+    {{#if loggedIn}} 
+    <nav>
+        <ul>
+            <li><a href="#">Latest Posts</a></li>
+            <li><a href="#">My Posts</a></li>
+            <li><button id="logout">Logout</button></li>
+        </ul>
+    </nav>
     {{else}}
-    <a href="/login">Login</a>
+    <nav>
+        <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+        </ul>
+    </nav>
     {{/if}}
-  </nav>
+  </header>
   <main>
-    <aside>
-      <h2></h2>
-    </aside>
-    <div class="">
-      {{{body}}}
-    </div>
+    {{#if loggedIn}}
+    <section>
+        <h2>Latest Posts</h2>
+        <ul id="post-list"></ul>
+        </section>
+        <section>
+            <h2>Categories</h2>
+            <ul id="category-list">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Music</a></li>
+            </ul>
+        </section>
+        <section>
+        <h2>New Post</h2>
+        <form id="new-post-form">
+            <label for="title" >Title:</label>
+            <input type="text" id="title" name="title">
+            <label for="content">Content:</label>
+            <textarea id="content" name="content"></textarea>
+            <button type="submit">Create Post</button>
+        </form>
+        </section>
+    {{else}}
+    <section>
+        <h2>Please log in to view the latest posts!</h2>
+    </section>
+    {{/if}}
   </main>
-  {{#if loggedIn}}
-  <script src="/js/editor.js"></script>
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-
-</html>
+  <footer>
+    <p>Copyright © 2024 CRUDit</p>
+  </footer>
+  <script src="../public/js/editor.js"></script>
+  <script src="../public/js/login.js"></script>
+  <script src="../public/js/logout.js"></script>
+  </body>
+  </html>
