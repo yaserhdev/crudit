@@ -1,5 +1,8 @@
-// Import express router
+const { Module } = require('module');
+const { Model } = require('../config/connection');
+
 const router = require('express').Router();
+
 // Import api and home routes
 // const apiRoutes = require('./api');
 const homeRoutes = require('./homepage.js');
@@ -8,3 +11,4 @@ router.use('/', homeRoutes);
 // router.use('/api', apiRoutes);
 // Export module
 module.exports = router;
+
