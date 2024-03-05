@@ -1,12 +1,11 @@
 const { Post } = require('../models');
+const sequelize = require('../config/connection.js');
 
 const postData = [
   {
-    post_id: 1,
     title: 'Test',
     content: 'This is a test post!',
-    post_id: '',
-    user_id: '',
+    user_id: 1,
   },
 ];
 
