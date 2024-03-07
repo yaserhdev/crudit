@@ -29,6 +29,15 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+// Get sign-up page
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signup');
+});
+
 // Get login page
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
