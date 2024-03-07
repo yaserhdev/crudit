@@ -16,15 +16,12 @@ Post.init(
     },
     content: {
         type: DataTypes.TEXT,
-    },
-    // post_id: {
-    //     type: sequelize.UUID,
-    //     defaultValue: sequelize.UUIDV4,
-    //     allowNull: false,
-    // },
-    user_id: {
-        type: DataTypes.INTEGER,
     }
+    // // post_id: {
+    // //     type: sequelize.UUID,
+    // //     defaultValue: sequelize.UUIDV4,
+    // //     allowNull: false,
+    // // }
   },
   {
     sequelize,
