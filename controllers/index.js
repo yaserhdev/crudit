@@ -1,14 +1,15 @@
-const { Module } = require('module');
-const { Model } = require('../config/connection');
-
+// Import express router
 const router = require('express').Router();
 
+// const { Module } = require('module');
+// const { Model } = require('../config/connection');
+
 // Import api and home routes
-// const apiRoutes = require('./api');
+const apiRoutes = require('./api');
 const homeRoutes = require('./homepage.js');
-// Middleware to use router
+// Use middleware
 router.use('/', homeRoutes);
-// router.use('/api', apiRoutes);
+router.use('/api', apiRoutes);
 // Export module
 module.exports = router;
 
