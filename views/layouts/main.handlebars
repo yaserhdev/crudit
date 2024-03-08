@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUDit</title>
+    <!-- Add your common CSS imports here, if we have any -->
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the CRUDit Forum home page!</h1>
+   {{#if loggedIn}} 
+    <nav>
+        <ul>
+            <li><a href="#">Latest Posts</a></li>
+            <li><a href="#">My Posts</a></li>
+            <li><button id="logout">Logout</button></li>
+        </ul>
+    </nav>
+    {{else}}
+    <nav>
+        <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+        </ul>
+    </nav>
+    {{/if}}
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    <p>Copyright © 2024 CRUDit</p>
+  </footer>
+<!-- Links to import required JS files -->
+  <script src="../public/js/editor.js"></script>
+  <script src="../public/js/login.js"></script>
+  <script src="../public/js/logout.js"></script>
+
+</body>
+</html>
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDit</title>
 </head>
 <body>
 
@@ -65,4 +110,4 @@
   <script src="../public/js/logout.js"></script>
   </body>
   </html>
-
+ --}}
