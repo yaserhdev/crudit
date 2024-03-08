@@ -1,14 +1,32 @@
 const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const exphbs = require('express-handlebars');
+const Sequelize = require('connect-session-sequelize')(session.Store);
+
 const routes = require('./controllers');
-// const helpers = require('./utils/helpers.js');
-const sequelize = require('./config/connection.js');
+const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const hbs = exphbs.create({ helpers });
+const userSession = {
+  secret: 'Super secret secret', // used to sign token
+  cookie: {
+    maxAge: 60 * 60 * 1000, // 1 hour
+    httpOnly: true,
+    secure: false, // set this to true if using https
+    sameSite: 'strict' // none, lax, strict
+  },
+  resave: false,
+  saveUninitialized: true,
+  // Sets up session store
+  store: new Sequelize({
+    db: sequelize,
+  }),
+};
+
+app.use(session(userSession));
 
 const hbs = exphbs.create({});
 

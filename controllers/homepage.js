@@ -1,19 +1,16 @@
 // Import express router
 const router = require('express').Router();
 // Import auth helper
-const withAuth = require('../utils/auth.js');
+// const withAuth = require('../utils/auth.js');
 // Import models
 const { User, Post } = require('../models');
 
 // Get all posts for logged in users on homepage
-router.get('/', withAuth, async (req, res) => {
+// router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             include: [
-                {
-                  model: Post,
-                  attributes: ['title', 'content'],
-                },
                 {
                   model: User, 
                   attributes: ['name'],
@@ -27,6 +24,7 @@ router.get('/', withAuth, async (req, res) => {
             posts,
             loggedIn: req.session.loggedIn,
         });
+        res.json(posts);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -34,14 +32,10 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // Get a single post
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
       const postData = await Post.findByPk(req.params.id, {
         include: [
-          {
-            model: Post,
-            attributes: ['title', 'content'],
-          },
           {
             model: User, 
             attributes: ['name'],
@@ -66,13 +60,13 @@ router.get('/:id', withAuth, async (req, res) => {
   });
 
 // Get sign-up page
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-    res.render('signup');
-});
+// router.get('/signup', (req, res) => {
+//     if (req.session.loggedIn) {
+//         res.redirect('/');
+//         return;
+//     }
+//     res.render('signup');
+// });
 
 // Get login page
 router.get('/login', (req, res) => {
