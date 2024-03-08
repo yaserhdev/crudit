@@ -1,7 +1,12 @@
 {{#if loggedIn}}
+<div id="editor"></div>
     <section>
         <h2>Latest Posts</h2>
-        <ul id="post-list"></ul>
+        <ul id="post-list">
+            {{#each posts as | post |}}
+            <li>{{post.title}}{{post.content}}{{post.user.name}}</li>
+            {{/each}}
+        </ul>
         </section>
         <section>
             <h2>Categories</h2>
