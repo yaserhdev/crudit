@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
             posts,
             loggedIn: req.session.loggedIn,
         });
-        res.json(posts);
+        // res.json(posts);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -32,41 +32,41 @@ router.get('/', async (req, res) => {
 });
 
 // Get a single post
-router.get('/:id', async (req, res) => {
-    try {
-      const postData = await Post.findByPk(req.params.id, {
-        include: [
-          {
-            model: User, 
-            attributes: ['name'],
-          },
-        ],
-      });
+// router.get('/:id', async (req, res) => {
+//     try {
+//       const postData = await Post.findByPk(req.params.id, {
+//         include: [
+//           {
+//             model: User, 
+//             attributes: ['name'],
+//           },
+//         ],
+//       });
   
-      if (!postData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
-      }
+//       if (!postData) {
+//         res.status(404).json({ message: 'No post found with this id' });
+//         return;
+//       }
   
-      const post = postData.get({ plain: true });
-      res.render('homepage', {
-        post,
-        loggedIn: req.session.loggedIn,
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+//       const post = postData.get({ plain: true });
+//       res.render('homepage', {
+//         post,
+//         loggedIn: req.session.loggedIn,
+//       });
+//     } catch (err) {
+//       console.log(err);
+//       res.status(500).json(err);
+//     }
+//   });
 
 // Get sign-up page
-// router.get('/signup', (req, res) => {
-//     if (req.session.loggedIn) {
-//         res.redirect('/');
-//         return;
-//     }
-//     res.render('signup');
-// });
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signup');
+});
 
 // Get login page
 router.get('/login', (req, res) => {
