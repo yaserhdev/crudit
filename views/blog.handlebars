@@ -13,8 +13,8 @@
         <p class="text-center blogDescTwo">{{description}}</p>
     </div>
 
-    {{if loggedIn}}
-
+    {{#if loggedIn}}
+    <div id="editor"></div>
     <form class"New-comment-form formCont d-flex flex-wrap justify-centent" data-blogid={{id}}>
         <div class="textAreaCont p-2">
             <textarea id="newCommentText" placeholder="Write a comment..." required></textarea>
