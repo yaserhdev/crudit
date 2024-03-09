@@ -12,6 +12,11 @@ CRUDit is an application which allows registered users to create, read, update, 
 
 ## Installation
 To install this application...
+    - npm install
+    - mysql login information will be required to create the database and tables.
+    - npm run seed
+    - npm start
+
 
 
 ## User Story

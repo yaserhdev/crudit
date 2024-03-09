@@ -4,5 +4,5 @@ const loginFormHandler = async (event) => {
     document.location.replace('/dashboard');  //redirect to dashboard page after logging in
 }
 document
-    .querySelector('.login-form')
+    .querySelector('.new-comment-form')
     .addEventListener('submit', loginFormHandler);

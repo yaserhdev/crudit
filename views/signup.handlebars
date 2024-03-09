@@ -1,30 +1,36 @@
 <div>
-  <h2 class="signup">Sign Up</h2>
-
-  <form class="form signup-form">
+  <h2 class="signup" font-size="30px" style="text-align: center;">Sign Up</h2>
+<br>
+<br>
+  <form class="form signup-form"style="text-align: center;">
     <div class="form-group">
-      <input class="form-input" type="string" placeholder="Email" id="email-signup" />
+      <label for="email">Email:</label>
+      <input class="form-input" type="string" placeholder="Email" id="email-signup" size="80" maxlength="100" />
     </div>
 
     <div class="form-group">
-      <input class="form-input" type="text" placeholder="Name" id="name-signup" />
+      <label for="name">Name:</label>
+      <input class="form-input" type="text" placeholder="Name" id="name-signup" size="80" maxlength="100" />
     </div>
 
     <div class="form-group">
-      <input class="form-input" type="text" placeholder="Username" id="username-signup" />
+      <label for="username">Username:</label>
+      <input class="form-input" type="text" placeholder="Username" id="username-signup" size="80" maxlength="100" />
     </div>
 
     <div class="form-group">
-      <input class="form-input" type="password" placeholder="Password" id="password-signup" />
+      <label for="password">Password:</label>
+      <input class="form-input" type="password" placeholder="Password" id="password-signup" size="80" maxlength="100" />
     </div>
-
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Signup</button>
+    <br>
+    <div style="text-align: center;">
+      <button class="btn btn-primary" type="submit">Sign up</button>
     </div>
   </form>
-  <div>
-    <a href="/login">Login Instead</a>
-  </div>
+  <br>
+  <div class="backto-login" style="text-align: center;">
+    <button class="btn btn-primary" onclick="window.location.href='/login'">Login Instead</button>
+</div>
 </div>
 
 <script src="/js/signup.js"></script>
