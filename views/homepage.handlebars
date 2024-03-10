@@ -1,13 +1,23 @@
 {{#if loggedIn}}
 <div id="editor"></div>
-    <section>
-        <h2>Latest Posts</h2>
-        <ul id="post-list">
-            {{#each posts as | post |}}
-            <li>{{post.title}}{{post.content}}{{post.user.name}}</li>
-            {{/each}}
+    <section id="latest-posts">
+    <h2>Latest Posts</h2>
+    <ul id="post-list">
+        {{#each posts as | post |}}
+        <ul class="post-item">
+            <div class="post-content">
+                <h3>{{post.title}}</h3>
+                <p>{{post.content}}</p>
+                <span class="post-author">Posted by: {{post.user.name}}</span>
+            </div>
+            <div class="post-actions">
+                <button class="comment-btn">Comment</button>
+                <button class="delete-btn">Delete</button>
+            </div>
         </ul>
-        </section>
+        {{/each}}
+    </ul>
+</section>
         <section>
             <h2>Categories</h2>
             <ul id="category-list">
