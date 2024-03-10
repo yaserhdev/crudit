@@ -1,12 +1,10 @@
 /*  main.hanndlebars  */
-header,
-section,
-footer,
-body {
+header ,section ,footer, body {
+  width:100%;
   margin: 0 auto;
-  background-color: rgb(43, 43, 43);
-  color: white;
-  padding: 20px;
+  background-color: rgb(43, 43, 43); 
+  color: white; 
+  padding: 20px; 
 }
 
 header h1 {
@@ -14,8 +12,9 @@ header h1 {
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 400;
   font-style: normal;
-  display: flex;
-
+  font-size: xx-large;
+  width: 960;
+  height: 100%;
 }
 
 #nav ul {
@@ -25,38 +24,79 @@ header h1 {
 
 #nav ul li {
   display: inline;
-  margin-right: 10px;
+  margin-right: 10px; 
 }
 
 #nav ul li a {
-  color: #fff;
-  text-decoration: none;
+  color: #fff; 
+  text-decoration: none; 
+  cursor: pointer;
 }
 
 .navigation {
   float: right;
   font-size: larger;
   padding: 2px 2px 2px 2px;
+  border-radius: 5px;
+
 
 }
-
 /* CSS for main content */
 main {
-  padding: 20px;
+  padding: 20px; 
 }
 
 /* CSS for footer */
 footer {
-  background-color: rgb(43, 43, 43);
-  color: white;
-  padding: 10px;
-  text-align: center;
+  background-color: rgb(43, 43, 43); 
+  color: white; 
+  padding: 10px; 
+  text-align: center; 
   font-weight: 100;
 }
 
 
 /* login handlebars */
 .login-container {
+   width: 960;
+   height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   box-sizing: border-box;
+   padding: 40px;
+   z-index: 9;
+   background: rgba(67, 83, 101,.9);
+   box-shadow: 0 15px 25px rgba(67, 83, 101,-15);
+   text-align:center;
+}
+
+
+#submit-button{
+  justify-content: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-image: linear-gradient(to right,#ff5a5f ,#ff256d );
+    transition: all .5s ease;
+}
+#submit-button:hover{
+    background:linear-gradient(to right,#FFE08D,#FB7DA8) ;
+}
+
+
+
+/*home page handlebar */
+
+#login-welcome-post {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   width: 960;
   height: auto;
   position: absolute;
