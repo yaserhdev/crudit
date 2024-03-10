@@ -1,9 +1,11 @@
 /*  main.hanndlebars  */
 header ,section ,footer, body {
+  width:100%;
   margin: 0 auto;
   background-color: rgb(43, 43, 43); 
   color: white; 
   padding: 20px; 
+   
 }
  
 #mainContent {
@@ -30,11 +32,15 @@ header ,section ,footer, body {
 #nav ul li a {
   color: #fff; 
   text-decoration: none; 
+  cursor: pointer;
+  
 }
 .navigation {
   float: right;
   font-size: larger;
   padding: 2px 2px 2px 2px;
+  border-radius: 5px;
+
 
 }
 /* CSS for main content */
