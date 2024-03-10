@@ -1,7 +1,9 @@
 {{#if loggedIn}}
 <div id="editor"></div>
     <section>
-    <h2>Latest Posts</h2>
+    <div class="post-logo" id="post-logo"> 
+        <h2>Latest Posts</h2>
+    </div>
     <ul id="post-list">
         {{#each posts as | post |}}
         <ul class="post-item">
