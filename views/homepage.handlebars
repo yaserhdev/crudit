@@ -1,7 +1,9 @@
 {{#if loggedIn}}
 <div id="editor"></div>
-    <section id="latest-posts">
-    <h2>Latest Posts</h2>
+    <section>
+    <div class="post-logo" id="post-logo"> 
+        <h2>Latest Posts</h2>
+    </div>
     <ul id="post-list">
         {{#each posts as | post |}}
         <ul class="post-item">
@@ -10,9 +12,16 @@
                 <p>{{post.content}}</p>
                 <span class="post-author">Posted by: {{post.user.name}}</span>
             </div>
-            <div class="post-actions">
-                <button class="comment-btn">Comment</button>
-                <button class="delete-btn">Delete</button>
+            <div class="post-meta">
+                <ul class="categories">
+                    {{#each post.categories as | category |}}
+                    <li>{{category}}</li>
+                    {{/each}}
+                </ul>
+                <div class="post-actions">
+                    <button class="comment-btn">Comment</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
             </div>
         </ul>
         {{/each}}
