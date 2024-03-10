@@ -5,10 +5,9 @@ header ,section ,footer, body {
   background-color: rgb(43, 43, 43); 
   color: white; 
   padding: 20px; 
-   
 }
- 
-#mainContent {
+
+header h1 {
   margin: 0;
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 400;
@@ -18,10 +17,9 @@ header ,section ,footer, body {
   height: 100%;
 }
 
-
 #nav ul {
-  list-style-type: none; 
-  padding: 0; 
+  list-style-type: none;
+  padding: 0;
 }
 
 #nav ul li {
@@ -33,8 +31,8 @@ header ,section ,footer, body {
   color: #fff; 
   text-decoration: none; 
   cursor: pointer;
-  
 }
+
 .navigation {
   float: right;
   font-size: larger;
@@ -99,4 +97,38 @@ footer {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 960;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 40px;
+  z-index: 9;
+  background: rgba(67, 83, 101, .9);
+  box-shadow: 0 15px 25px rgba(67, 83, 101, -15);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px !important;
+}
+
+#submit-button {
+  justify-content: center;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-image: linear-gradient(to right, #ff5a5f, #ff256d);
+  transition: all .5s ease;
+}
+
+#submit-button:hover {
+  background: linear-gradient(to right, #FFE08D, #FB7DA8);
 }
