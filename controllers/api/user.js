@@ -1,4 +1,4 @@
-// Import express router
+// Import express router and lodash
 const router = require('express').Router();
 var _ = require('lodash');
 // Import user model

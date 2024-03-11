@@ -7,7 +7,7 @@ const editHandler = async (event) => {
         const post_id = event.target.getAttribute('data-id');
         try {
             const response = await fetch(`/api/posts/${post_id}`, {
-                method: 'GET',
+                method: 'PUT',
                 body: JSON.stringify({ updatedTitle, updatedContent }),
                 headers: { 'Content-Type': 'application/json' }
             });
