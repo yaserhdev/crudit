@@ -29,19 +29,19 @@
     <form id="new-post-form">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title">
-        <div id="toolbar">
+        {{!-- <div id="toolbar" role="toolbar">
             <select class="ql-header" defaultValue={null}>
                 <option value=""></option>
                 <option value="1"></option>
                 <option value="2"></option>
                 <option value="3"></option>
             </select>
-            <button class="ql-bold"></button>
+            <button class="ql-bold btn btn-primary"></button>
             <button class="ql-italic"></button>
             <button class="ql-link"></button>
             <button class="ql-image"></button>
         </div>
-        <div id="editor"></div>
+        <div id="editor"></div> --}}
         <label for="content">Content:</label>
         <textarea id="content" name="content"></textarea>
         <button data-id={{post.post_id}} type="submit">Create Post</button>
@@ -56,5 +56,15 @@
     </h5>
 </section>
 {{/if}}
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-<script src="/js/editor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+{{!-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>const quill = new Quill('#editor', {
+  modules: {
+    toolbar: '#toolbar'
+  },
+  theme: 'snow'
+});
+</script> --}}
+{{!-- <script src="/js/editor.js"></script> --}}
