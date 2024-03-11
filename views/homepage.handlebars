@@ -17,6 +17,7 @@
                     {{/each}}
                 </ul>
                 <div class="post-actions">
+                    <button data-id={{post.post_id}} class="edit-btn" onclick="window.location.href='/update'">Edit</button>
                     <button data-id={{post.post_id}} class="delete-btn">Delete</button>
                 </div>
             </div>
@@ -49,6 +50,7 @@
 </section>
 <script src="/js/create-post.js"></script>
 <script src="/js/delete-post.js"></script>
+<script src="/js/update.js"></script>
 {{else}}
 <section>
     <h5 class="login-welcome-post" id="login-welcome-post">

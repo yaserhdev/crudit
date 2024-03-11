@@ -30,5 +30,26 @@ router.delete('/:post_id', (req, res) => {
     })
     .catch((err) => res.json(err));
 });
+// Edit post
+router.put('/:post_id', async (req, res) => {
+    const updatedPost = await Post.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          post_id: req.params.post_id,
+        },
+      }
+    )
+    .then((updatedPost) => {
+      res.json(updatedPost);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
 // Export module
 module.exports = router;
