@@ -1,5 +1,6 @@
 // Import express router
 const router = require('express').Router();
+var _ = require('lodash');
 // Import user model
 const { User } = require('../../models');
 // Create new user
@@ -7,7 +8,7 @@ router.post('/', async (req, res) => {
   try {
     const userData = await User.create({
       email: req.body.email,
-      name: req.body.name,
+      name: _.upperFirst(req.body.name),
       username: req.body.username,
       password: req.body.password,
     });
