@@ -3,7 +3,7 @@ Group Project 2
 
 
 ## Description
-CRUDit is a blog-type website which allows registered users to create, read, update, and delete posts.
+CRUDit is a blog-type website which allows registered users to create, read, and delete posts.
 
 
 ## User Story
@@ -32,4 +32,4 @@ THEN I am logged out and can no longer see posts
 
 ![Screenshot of deployed application](public/images/crudit-screenshot.png)
 
-Live application: 
+Live application: https://infinite-brushlands-89514-07257eec72fc.herokuapp.com/
