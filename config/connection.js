@@ -2,7 +2,6 @@
 const Sequelize = require('sequelize');
 // Require dotenv
 require('dotenv').config();
-
 // Create connection to database
 const sequelize = new Sequelize(
     // Database name from .env file
@@ -17,6 +16,5 @@ const sequelize = new Sequelize(
         port: 3306,
     }
 );
-
 // Export module
 module.exports = sequelize;

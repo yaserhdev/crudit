@@ -1,13 +1,14 @@
+// Import model, datatypes, bcrypt, and sequelize
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection.js');
-
+// Declare class for model
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// Set properties of model
 User.init(
   {
     user_id: {
@@ -24,16 +25,16 @@ User.init(
       type: DataTypes.STRING,
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true,
-        },
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
     password: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {
         len: [8],
       },
@@ -53,5 +54,5 @@ User.init(
     modelName: 'user',
   }
 );
-
+// Export model
 module.exports = User;
