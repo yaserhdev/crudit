@@ -261,7 +261,7 @@ footer {
 }
 
 /* CSS for the Quill JS elements */
-
+/* 
 #toolbar {
   display: flex;
   flex-direction: row;
@@ -270,16 +270,17 @@ footer {
   margin-bottom: 10px;
 }
 
-#toolbar .ql-toolbar.ql-snow {
+#toolbar .ql-toolbar .ql-snow {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-#toolbar .ql-formats {
+#toolbar #ql-bold btn btn-primary {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+ */
