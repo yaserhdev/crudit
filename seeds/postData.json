@@ -1,7 +1,18 @@
 [
   {
-    "title": "Test",
-    "content": "This is a test post!",
-    "user_id": 1
+    "title": "CRUDit",
+    "content": "Welcome all! Feel free to make posts about whatever it is you'd like. Favorite recipe? Post it! Favorite quote/saying? Post it! Need to rant? Post it!"
+  },
+  {
+    "title": "Food for Thought",
+    "content": "Carry a fork with you. If someone tries to rob you, pull it out and say 'Thank you Lord for this meal I'm about to have' and charge at them with the fork!"
+  },
+  {
+    "title": "The Best Judge of Character",
+    "content": "Hi everyone! Just wanted to say how I thinks dogs are the best judges of character and you should always trust them. They know who to say away from..."
+  },
+  {
+    "title": "Perfect Scrambled Eggs",
+    "content": "I've found the perfect way to make scrambled eggs. After whisking the eggs, set the pan on high to heat up. Added equal parts butter and oil. Once bubbling/shimmering, pour in eggs. Continuously whisk the eggs in the pan while also moving the pan back and forth. Keep this going until you reach your desired consistency. Enjoy!"
   }
 ]
