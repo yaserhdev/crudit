@@ -1,8 +1,9 @@
+// Import model, datatypes, and sequelize
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
-
-class Post extends Model {}
-
+// Declare class for model
+class Post extends Model { }
+// Set properties of model
 Post.init(
   {
     post_id: {
@@ -15,13 +16,15 @@ Post.init(
       type: DataTypes.STRING,
     },
     content: {
-        type: DataTypes.TEXT,
+      type: DataTypes.TEXT,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'user_id'
+      }
     }
-    // // post_id: {
-    // //     type: sequelize.UUID,
-    // //     defaultValue: sequelize.UUIDV4,
-    // //     allowNull: false,
-    // // }
   },
   {
     sequelize,
@@ -31,5 +34,5 @@ Post.init(
     modelName: 'post',
   }
 );
-
+// Export model
 module.exports = Post;
